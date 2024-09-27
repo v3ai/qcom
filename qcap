@@ -1,43 +1,11 @@
 #!/bin/bash
 
-wdir=$(pwd)
+wdir = $(pwd)
 
-msg="qcap"
+msg = "qcap"
 
-while getopts ":m:" opt; do
-  case $opt in
-     m)
-       msg="$OPTARG"
-       ;;
-     *)
-       echo "Usage: qcap [optional directory] [optional flag -m msg]"
-       exit 1
-       ;;
-  esac
-done
-
-# Possibilities
-
-#qcap 
-#qcap dir
-#qcap -m
-#qcap -m "test"
-#qcap dir -m
-#qcap dir -m "test"
-
-
-
-if [ $# == 1 ] && [ $msg == "qcap" ]; then
-	cd $1
-fi
-
-if [ $# == 2 ] && [ $msg == "" ]; then
-	cd $1
-fi
-
-if [ $# == 3 ]; then
-	cd $1
-fi
+cd $1
+msg = $2
 
 
 
