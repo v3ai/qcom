@@ -23,7 +23,7 @@ if [ $# == 1 ] && [ $msg == "qcap" ]; then
 fi
 
 
-if $# == 2; then
+if [ $# == 2 ]; then
 	cd $1
 fi
 
