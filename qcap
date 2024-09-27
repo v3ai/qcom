@@ -17,6 +17,14 @@ while getopts ":m:d:" opt; do
 done
 
 
+if [ $# == 1 ]; then
+	cd $1
+fi
+
+if [ $# == 3 ]; then
+	cd $1
+fi
+
 
 if test -d ./.git; then
 
