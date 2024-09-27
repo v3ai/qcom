@@ -1,11 +1,8 @@
 #!/bin/bash
 
-wdir = $(pwd)
+wdir=$(pwd)
 
-msg = "qcap"
-
-cd $1
-msg = $2
+msg="qcap"
 
 
 
