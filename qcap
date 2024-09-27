@@ -16,9 +16,6 @@ while getopts ":m:d:" opt; do
   esac
 done
 
-if ["$#" == 1]; then
-	cd $1
-fi
 
 
 if test -d ./.git; then
