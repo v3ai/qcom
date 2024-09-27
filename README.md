@@ -19,5 +19,10 @@ sudo mv quick /usr/bin
 ```
 quick
 ```
+5. Additionally you can type the name of the directory you want to be commited and pushed like so (where ~/Desktop/Projects/program-1 is replaced with the path to whatever dir you wanna have commited, 
+and pushed)
 
+```
+quick ~/Desktop/Projects/program-1
+```
 

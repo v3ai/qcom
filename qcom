@@ -1,5 +1,13 @@
 #!/bin/bash
 
+wdir=$(pwd)
+
+echo $1
+
+if [ -n "$1" ]; then
+	cd $1
+fi
+
 if test -d ./.git; then
 	read -p "Enter commit message, or leave blank: " msg
   	git add .
@@ -35,4 +43,4 @@ else
   	git push --set-upstream origin master
 fi
 
-
+cd $wdir
