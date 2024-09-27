@@ -18,7 +18,7 @@ done
 
 # cases, 1: no optional dir, no flag, 2: optional dir and no flag: 3: no optional dir and flag 4: optional dir and flag
 
-if $# == 1 && $msg == "qcap"; then
+if [ $# == 1 ] && [ $msg == "qcap" ]; then
 	cd $1
 fi
 
