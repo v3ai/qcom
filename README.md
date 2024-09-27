@@ -1,4 +1,4 @@
-# Quick commiter and pusher for git
+# Quick commiter and pusher for git to github/other repo hosting services
 ---
 
 ### how to use 
@@ -15,4 +15,9 @@ sudo mv quick /usr/bin
 
 ```
 
-4. Go into an empty or populated directory and type quick
+4. Go into an empty or populated directory and type
+```
+quick
+```
+
+

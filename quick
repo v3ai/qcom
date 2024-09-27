@@ -15,6 +15,12 @@ if test -d ./.git; then
 else
 	git init
 	read -p "Enter Repo To Push To: " url
+
+	while [ -z "$url"];
+	do
+		read -p "Enter Repo To Push To: " url
+	done
+	
 	git remote add origin $url
   	git add .
   	
