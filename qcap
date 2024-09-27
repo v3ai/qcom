@@ -4,10 +4,10 @@ wdir=$(pwd)
 
 msg="qcap"
 
-while getopts ":m" opt; do
+while getopts ":m:" opt; do
   case $opt in
      m)
-       msg=$OPTARG
+       msg= $OPTARG
        ;;
      *)
        echo "Usage: qcap [optional directory] [optional flag -m ]"
