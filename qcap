@@ -4,6 +4,26 @@ wdir=$(pwd)
 
 msg="qcap"
 
+while getopts ":m:d:" opt; do
+  case $opt in
+     m)
+       msg="$OPTARG"
+       if [msg == ""]; then
+           echo "Usage: qcap [optional directory] [optional flag -m msg]"
+           exit 1
+       fi
+       ;;
+     d)
+       cd $OPTARG
+       ;;
+     *)
+       echo "Usage: qcap [optional directory] [optional flag -m msg]"
+       exit 1
+       ;;
+  esac
+done
+
+
 
 
 if test -d ./.git; then
