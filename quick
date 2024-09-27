@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if test -d ./.git; then
+	read -p "Enter commit message, or leave blank: " msg
+  	git add .
+
+	if [[-z "$msg"]]; then
+	  	    git commit -m "@.@"
+	  	else
+	  	    git commit -m "$msg"
+	  	fi
+  	
+  	git push
+  	
+else
+	git init
+	read -p "Enter Repo To Push To: " url
+	git remote add origin $url
+  	git add .
+  	
+  	read -p "Enter commit message, or leave blank: " msg
+
+	if [[-z "$msg"]]; then
+	  	    git commit -m "@.@"
+	  	else
+	  	    git commit -m "$msg"
+	  	fi
+  	
+  	git push --set-upstream origin master
+fi
+
+
