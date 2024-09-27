@@ -16,12 +16,14 @@ while getopts ":m:" opt; do
   esac
 done
 
-#1: no optional dir, no flag,  $# = 0
+# Possibilities
 
-#2: optional dir and no flag:  $# = 1
-#3: no optional dir and flag   $# = 2 (or 1 if they dont put msg)
-
-#4: optional dir and flag      $# = 3 (or 2 if they dont put msg)
+#qcap 
+#qcap dir
+#qcap -m
+#qcap -m "test"
+#qcap dir -m
+#qcap dir -m "test"
 
 
 
@@ -29,8 +31,11 @@ if [ $# == 1 ] && [ $msg == "qcap" ]; then
 	cd $1
 fi
 
+if [ $# == 2 ] && [ $msg == "" ]; then
+	cd $1
+fi
 
-if [ $# == 2 ] || [ $# == 3 ]; then
+if [ $# == 3 ]; then
 	cd $1
 fi
 
