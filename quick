@@ -4,8 +4,8 @@ if test -d ./.git; then
 	read -p "Enter commit message, or leave blank: " msg
   	git add .
 
-	if [[-z "$msg"]]; then
-	  	    git commit -m "@.@"
+	if [ -z "$msg" ]; then
+	  	    git commit -m "quick"
 	  	else
 	  	    git commit -m "$msg"
 	  	fi
@@ -20,8 +20,8 @@ else
   	
   	read -p "Enter commit message, or leave blank: " msg
 
-	if [[-z "$msg"]]; then
-	  	    git commit -m "@.@"
+	if [ -z "$msg" ];  then
+	  	    git commit -m "quick"
 	  	else
 	  	    git commit -m "$msg"
 	  	fi
