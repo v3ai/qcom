@@ -8,7 +8,7 @@ while getopts ":m:d:" opt; do
   case $opt in
      m)
        msg="$OPTARG"
-       echo msg
+       echo $msg
        ;;
      d)
        cd $OPTARG
