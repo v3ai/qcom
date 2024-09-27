@@ -7,7 +7,7 @@ msg="qcap"
 while getopts ":m:d:" opt; do
   case $opt in
      m)
-       msg="$OPTARG"
+       msg=$OPTARG
        ;;
      *)
        echo "Usage: qcap [optional directory] [optional flag -m msg]"
