@@ -46,20 +46,23 @@ sudo mv qcom /usr/bin
 ```
 qcom
 ```
-5. Additionally you can type the name of the directory you want to be commited and pushed like so (where program-1/ is replaced with the path to whatever dir you wanna have commited, 
+5. Additionally you can type the name of the directory you want to be commited and pushed like so (where ~/Desktop/whatever-dir/ is replaced with the path to whatever dir you wanna have commited, 
 and pushed)
 
 ```
-qcom program-1/
+qcom ~/Desktop/whatever-dir/
 ```
 
 ## Adding a message
-You can also use the flag -m if you want to specify a different msg than "qcom"
+You can also use the flag -m if you want to specify a different msg than the default "qcom"
 
 ```
 qcom -m "changed xyz"
 ```
 (works with previous dir option too)
 ```
-qcom program-1/ -m "changed xyz"
+qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ```
+
+## TLDR
+Usage: $ qcom [optional directory] [optional flag -m] [message if using -m]
