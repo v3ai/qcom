@@ -1,0 +1,83 @@
+#!/bin/bash
+
+#current dir you're in
+wdir=$(pwd)
+
+#default msg
+msg="qcom"
+
+execute () {
+
+	if test -d ./.git; then
+	
+	  	git add .
+		git commit -m "$msg"
+	  	git push
+	  	
+	else
+		git init
+		read -p "Enter Repo To Push To: " url
+	
+		while [ -z "$url"];
+		do
+			read -p "Enter Repo To Push To: " url
+		done
+		
+		git remote add origin $url
+		
+	  	git add .
+		git commit -m "$msg"	
+	  	git push --set-upstream origin master
+	fi	
+}
+
+#no dir no m -- done 
+#dir no m -- done 
+#no dir m
+#dir and m
+
+
+while getopts ":m:" Option
+do
+ case $Option in
+ 	m )
+ 		if [ $# == 1 ]; then
+ 		
+ 			echo "no input for -m flag"
+ 			
+ 		elif [ $# == 2 ]; then
+ 		
+ 			msg="$OPTARG"
+ 			execute
+ 			
+ 		elif [ $# == 3 ]; then
+ 		
+			cd $1
+			msg="OPTARG"
+			execute
+			cd $wdir
+			
+ 		else
+ 		
+			echo "Too many inputs"
+			
+ 		fi
+ 			exit 1
+ 	;;
+ 	* ) echo "usage"
+ 	;;
+ esac
+done
+
+
+#if there is one arg, cd to it 
+if [ $# == 1 ]; then
+	cd $1
+fi
+
+#run commands once in dir
+execute
+
+
+#go back to dir you were originally in
+cd $wdir
