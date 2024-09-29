@@ -1,5 +1,5 @@
 #!/bin/bash
-echo $#
+
 #current dir you're in
 wdir=$(pwd)
 
