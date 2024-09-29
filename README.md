@@ -1,6 +1,34 @@
-# QCOM: an auto commiting and pushing tool to make updating repos quick and easy
+# QCOM: an auto commiting and pushing tool to update repos quick and dirty
 
-### how to use 
+## Motivation
+Sometimes you just want whatever code/configs/whatever inside a directory commited and pushed quick
+
+usually I find myself in this pattern
+
+```
+git add .
+git commit -m "whatever msg idc"
+git push
+```
+or 
+```
+cd ~/Desktop/whatever-dir/
+git add .
+git commit -m "whatever msg idc"
+git push
+```
+
+these can both be replaced by
+```
+qcom
+```
+or 
+```
+qcom ~/Desktop/whatever-dir/
+```
+
+
+## How to use 
 
 1. Download files
 
@@ -24,7 +52,9 @@ and pushed)
 ```
 qcom program-1/
 ```
-6. You can also use the flag -m if you want to specify a different msg than "qcom"
+
+## Adding a message
+You can also use the flag -m if you want to specify a different msg than "qcom"
 
 ```
 qcom -m "changed xyz"
