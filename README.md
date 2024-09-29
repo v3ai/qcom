@@ -1,4 +1,4 @@
-# QCOM: a quick commiter and pusher for git
+# QCOM: an auto commiting and pushing tool to make updating repos quick and easy
 
 ### how to use 
 
