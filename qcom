@@ -32,42 +32,6 @@ execute () {
 }
 
 
-while getopts "m" flag
-do
- case $flag in
- 	m )
- 		echo "m flag rec"
- 		if [ $# == 1 ]; then
- 			echo "test1"
- 		
- 			echo "no input for -m flag"
- 			
- 		elif [ $# == 2 ]; then
- 			echo "test222"
- 			echo "$OPTARG"
- 			execute
- 			
- 		elif [ $# == 3 ]; then
- 			echo "test3"
-			cd $1
-			msg="OPTARG"
-			execute
-			cd $wdir
-			
- 		else
- 		
-			echo "Too many inputs"
-			
- 		fi
- 			exit 1
- 	;;
- 	* ) echo "usage"
- 		exit 1
- 	;;
- esac
-done
-
-
 if [ $# == 0 ]; then
 	execute
 	exit 1
@@ -75,6 +39,7 @@ elif [ $# == 1 ]; then
 	cd $1
 	execute
 	cd $wdir
+	exit 1
 fi
 
 
