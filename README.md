@@ -64,5 +64,5 @@ qcom -m "changed xyz"
 qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ```
 
-## TLDR
-Usage: $ qcom [optional directory] [optional flag -m] [message if using -m]
+## TLDR Usage
+$ qcom [optional directory] [optional flag -m] [message if using -m]
