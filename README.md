@@ -64,5 +64,8 @@ qcom -m "changed xyz"
 qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ```
 
+6. I would advise you set up githib push to work with ssh keys just to make everything easy
+
 ## TLDR Usage
 $ qcom [optional directory] [optional flag -m] [message if using -m]
+
