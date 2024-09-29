@@ -1,7 +1,7 @@
 # QCOM: an auto commiting and pushing tool to update repos quick and dirty
 
 ## Motivation
-Sometimes you just want whatever code/configs/whatever inside a directory commited and pushed quick
+Sometimes you just want whatever code/configs/whatever inside a directory commited and pushed to github quick
 
 usually I find myself in this pattern
 
