@@ -1,7 +1,7 @@
 # QCOM: an auto committing and pushing tool to update repos quick and dirty
 
 ## Motivation
-Sometimes you just want whatever code/configs/whatever inside a directory commited and pushed to github quick
+Sometimes you just want whatever code/configs/whatever inside a directory committed and pushed to github quick
 
 usually I find myself in this pattern
 
@@ -64,7 +64,7 @@ qcom -m "changed xyz"
 qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ```
 
-6. I would advise you set up githib push to work with ssh keys just to make everything easy
+6. I would advise you set up github push to work with ssh keys just to make everything easy
 
 ## TLDR Usage
 $ qcom [optional directory] [optional flag -m] [message if using -m]
