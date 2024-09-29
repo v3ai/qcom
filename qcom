@@ -65,6 +65,7 @@ do
  			exit 1
  	;;
  	* ) echo "usage"
+ 		exit 1
  	;;
  esac
 done
