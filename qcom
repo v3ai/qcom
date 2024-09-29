@@ -31,15 +31,10 @@ execute () {
 	fi	
 }
 
-#no dir no m -- done 
-#dir no m -- done 
-#no dir m
-#dir and m
 
-
-while getopts "m" Option
+while getopts "m" flag;
 do
- case $Option in
+ case $flag in
  	m )
  		echo "m flag rec"
  		if [ $# == 1 ]; then
