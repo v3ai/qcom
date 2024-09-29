@@ -53,7 +53,7 @@ while :; do
       	exit 0
         ;;
       *)
-        echo Unknown option: $OPTARG.
+        echo "Usage: qcom [optional directory] [optional flag -m] [message if using -m]"
         ;;
     esac
   done
