@@ -44,7 +44,7 @@ do
  			
  		elif [ $# == 2 ]; then
  			echo "test2"
- 			msg="$OPTARG"
+ 			echo $OPTARG
  			execute
  			
  		elif [ $# == 3 ]; then
