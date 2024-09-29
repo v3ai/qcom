@@ -31,15 +31,43 @@ execute () {
 	fi	
 }
 
+#check for flags
 
-if [ $# == 0 ]; then
-	execute
-	exit 1
-elif [ $# == 1 ]; then
+while :; do
+  while getopts "m:" arg; do
+    case $arg in
+      m)
+      	if [ $# == 3 ]; then
+			cd $1
+			if [ $? == 1 ] then
+				echo "cd to directory failed"
+				exit 1
+			fi
+			execute
+			cd $wdir
+			exit 0
+      	fi
+      	msg=$OPTARG
+      	execute
+      	exit 0
+        ;;
+      *)
+        echo Unknown option: $OPTARG.
+        ;;
+    esac
+  done
+  ((OPTIND++)) 
+  [ $OPTIND -gt $# ] && break
+done
+
+
+
+if [ $# == 1 ]; then
 	cd $1
 	execute
 	cd $wdir
-	exit 1
+	exit 0
+elif [ $# == 0 ]; then
+	execute
+	exit 0
 fi
-
-
