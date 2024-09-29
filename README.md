@@ -1,4 +1,4 @@
-# QCOM: an auto commiting and pushing tool to update repos quick and dirty
+# QCOM: an auto committing and pushing tool to update repos quick and dirty
 
 ## Motivation
 Sometimes you just want whatever code/configs/whatever inside a directory commited and pushed to github quick
@@ -69,5 +69,5 @@ qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ## TLDR Usage
 $ qcom [optional directory] [optional flag -m] [message if using -m]
 
-# CC BY-SA 4.0
+## CC BY-SA 4.0
 

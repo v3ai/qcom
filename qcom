@@ -6,6 +6,8 @@ wdir=$(pwd)
 #default msg
 msg="qcom"
 
+
+# commit and push
 execute () {
 
 	if test -d ./.git; then
@@ -32,7 +34,7 @@ execute () {
 }
 
 
-#check for flags
+#check m flag
 
 while :; do
   while getopts "m:h" arg; do
