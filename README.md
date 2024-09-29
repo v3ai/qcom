@@ -69,3 +69,5 @@ qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ## TLDR Usage
 $ qcom [optional directory] [optional flag -m] [message if using -m]
 
+# CC BY-SA 4.0
+
