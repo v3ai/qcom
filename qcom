@@ -32,7 +32,7 @@ execute () {
 }
 
 
-while getopts "m" flag;
+while getopts "m" flag
 do
  case $flag in
  	m )
