@@ -43,7 +43,7 @@ do
  			echo "no input for -m flag"
  			
  		elif [ $# == 2 ]; then
- 			echo "test2"
+ 			echo "test222"
  			echo $OPTARG
  			execute
  			
