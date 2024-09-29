@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo $#
 #current dir you're in
 wdir=$(pwd)
 
@@ -37,21 +37,23 @@ execute () {
 #dir and m
 
 
-while getopts ":m:" Option
+while getopts "m" Option
 do
  case $Option in
  	m )
+ 		echo "m flag rec"
  		if [ $# == 1 ]; then
+ 			echo "test1"
  		
  			echo "no input for -m flag"
  			
  		elif [ $# == 2 ]; then
- 		
+ 			echo "test2"
  			msg="$OPTARG"
  			execute
  			
  		elif [ $# == 3 ]; then
- 		
+ 			echo "test3"
 			cd $1
 			msg="OPTARG"
 			execute
@@ -71,14 +73,13 @@ do
 done
 
 
-#if there is one arg, cd to it 
-if [ $# == 1 ]; then
+if [ $# == 0 ]; then
+	execute
+	exit 1
+elif [ $# == 1 ]; then
 	cd $1
+	execute
+	cd $wdir
 fi
 
-#run commands once in dir
-execute
 
-
-#go back to dir you were originally in
-cd $wdir
