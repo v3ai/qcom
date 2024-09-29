@@ -1,4 +1,4 @@
-# Quick commit and pusher (qcap) for git to github/other repo hosting services
+# Quick commit and pusher for git to github/other repo hosting services
 ---
 
 ### how to use 
@@ -10,19 +10,28 @@
 3. Type these commands in the terminal
 
 ```
-sudo chmod +x qcap
-sudo mv qcap /usr/bin
+sudo chmod +x qcom
+sudo mv qcom /usr/bin
 
 ```
 
 4. Go into an empty or populated directory and type
 ```
-qcap
+qcom
 ```
 5. Additionally you can type the name of the directory you want to be commited and pushed like so (where ~/Desktop/Projects/program-1 is replaced with the path to whatever dir you wanna have commited, 
 and pushed)
 
 ```
-qcap ~/Desktop/Projects/program-1
+qcom program-1/
 ```
+6. You can also use the flag -m if you want to specify a different msg than "qcom"
 
+
+```
+qcom -m "changed xyz"
+```
+(works with previous dir option too)
+```
+qcom program-1/ -m "changed xyz"
+```
