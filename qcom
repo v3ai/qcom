@@ -35,7 +35,7 @@ execute () {
 #check for flags
 
 while :; do
-  while getopts "m:" arg; do
+  while getopts "m:h" arg; do
     case $arg in
       m)
       	if [ $# == 3 ]; then
@@ -53,8 +53,13 @@ while :; do
       	execute
       	exit 0
         ;;
+      h)
+        echo -e "Usage: qcom [optional directory] [optional flag -m] [message if using -m]"
+        exit 0
+        ;;
       *)
-        echo "Usage: qcom [optional directory] [optional flag -m] [message if using -m]"
+        echo -e "\nUsage: qcom [optional directory] [optional flag -m] [message if using -m]"
+        exit 1
         ;;
     esac
   done
