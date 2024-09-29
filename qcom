@@ -43,6 +43,7 @@ while :; do
 				echo "cd to directory failed"
 				exit 1
 			fi
+			msg=$OPTARG
 			execute
 			cd $wdir
 			exit 0
