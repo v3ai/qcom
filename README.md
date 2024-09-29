@@ -1,5 +1,4 @@
 # Quick commit and pusher for git to github/other repo hosting services
----
 
 ### how to use 
 
