@@ -1,4 +1,4 @@
-# Quick commit and pusher for git to github/other repo hosting services
+# QCOM: a quick commiter and pusher for git
 
 ### how to use 
 
