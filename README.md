@@ -38,11 +38,11 @@ qcom ~/Desktop/whatever-dir/
 
 ```
 sudo chmod +x qcom
-sudo mv qcom /usr/bin
+sudo mv qcom /usr/local/bin
 
 ```
 
-4. Go into an empty or populated directory you want to commit+push and type (if no previous .git repo it will make one and ask you to specify a location to push to)
+4. Go into an empty or populated directory you want to commit+push and type (if no previous .git repo it will make one and ask you to specify a location to push to, for github it will look like "git@github.com:v3ai/example.git")
 ```
 qcom
 ```
