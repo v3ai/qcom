@@ -59,7 +59,7 @@ You can also use the flag -m if you want to specify a different msg than the def
 ```
 qcom -m "changed xyz"
 ```
-(works with previous dir option too)
+(This works with previous dir option too)
 ```
 qcom ~/Desktop/whatever-dir/ -m "changed xyz"
 ```
