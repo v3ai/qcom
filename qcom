@@ -4,7 +4,7 @@ set -e
 wdir=$(pwd)
 
 #default msg
-msg="qcom"
+msg="Pushed with qcom, https://github.com/v3ai/qcom"
 
 
 # commit and push
