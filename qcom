@@ -1,87 +1,16 @@
 #!/bin/bash
-set -e
-#current dir you're in
-wdir=$(pwd)
 
-#default msg
-msg="Pushed with qcom: https://github.com/v3ai/qcom"
+if [ $# == 0 ]; then
 
+	git add .
+	git commit -m "Pushed with qcom: https://github.com/v3ai/qcom"
+	git push
 
-# commit and push
-execute () {
+else
 
-	if test -d ./.git; then
-	
-	  	git add .
-		git commit -m "$msg"
-	  	git push
-	  	
-	else
-		git init
-		read -p "Enter Repo To Push To: " url
-	
-		while [ -z "$url"];
-		do
-			read -p "Enter Repo To Push To: " url
-		done
-		
-		git remote add origin $url
-		
-	  	git add .
-		git commit -m "$msg"	
-	  	git push --set-upstream origin master
-	fi	
-}
-
-
-#check m flag
-
-while :; do
-  while getopts "m:h" arg; do
-    case $arg in
-      m)
-      	if [ $# == 3 ]; then
-			cd $1
-			if [ $? == 1 ]; then
-				echo "cd to directory failed"
-				exit 1
-			fi
-			msg=$OPTARG
-			execute
-			cd $wdir
-			exit 0
-      	fi
-      	msg=$OPTARG
-      	execute
-      	exit 0
-        ;;
-      h)
-        echo -e "Usage: qcom [optional directory] [optional flag -m] [message if using -m]"
-        exit 0
-        ;;
-      *)
-        echo -e "\nUsage: qcom [optional directory] [optional flag -m] [message if using -m]"
-        exit 1
-        ;;
-    esac
-  done
-  ((OPTIND++)) 
-  [ $OPTIND -gt $# ] && break
-done
-
-
-
-if [ $# == 1 ]; then
 	cd $1
+	git add .
+	git commit -m "Pushed with qcom: https://github.com/v3ai/qcom"
+	git push
 
-	if [ $? == 1 ]; then
-		echo "cd to directory failed"
-		exit 1
-	fi
-	execute
-	cd $wdir
-	exit 0
-elif [ $# == 0 ]; then
-	execute
-	exit 0
 fi

@@ -1,4 +1,10 @@
-# QCOM: an auto committing and pushing tool to update repos quick and dirty
+# QCOM: an auto committing and pushing tool to update repos quick and dirty (Linux)
+
+## TLDR Usage
+
+```
+qcom [optional directory]
+```
 
 ## Motivation
 Sometimes you just want whatever code/configs/whatever inside a directory committed and pushed to github quick
@@ -42,7 +48,7 @@ sudo mv qcom /usr/local/bin
 
 ```
 
-4. Go into an empty or populated directory you want to commit+push and type (if no previous .git repo it will make one and ask you to specify a location to push to, for github the location to push to will look like something like "git@github.com:v3ai/example.git")
+4. Go into a directory that you already have a git repo in that's setup to push to like github or another place and type
 ```
 qcom
 ```
@@ -53,21 +59,9 @@ and pushed)
 qcom ~/Desktop/whatever-dir/
 ```
 
-## Adding a message
-You can also use the flag -m if you want to specify a different msg than the default "qcom"
 
-```
-qcom -m "changed xyz"
-```
-(This works with previous dir option too)
-```
-qcom ~/Desktop/whatever-dir/ -m "changed xyz"
-```
+6. I would advise you set up github push to work with ssh keys just to make everything easy and quick
 
-6. I would advise you set up github push to work with ssh keys just to make everything easy
-
-## TLDR Usage
-$ qcom [optional directory] [optional flag -m] [message if using -m]
 
 ## CC BY-SA 4.0
 
